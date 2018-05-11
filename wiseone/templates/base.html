@@ -28,18 +28,23 @@
     {% cms_toolbar %}
     <div id="sitewide-masthead" class="container-fluid">
         <div class="row">
-            <div id="logo-wrapper" class="col-sm-3">
+            <div id="logo-wrapper" class="col-12 col-sm-4">
                 <a href="/">
                     <img src="{% static 'images/WiseOneRealty-94x99.png' %}" alt="Wise One Realty logo">
                 </a>
+                <div id="tagline-wrapper" class="text-left">
+                    {% static_placeholder "tagline" %}
+                </div>
             </div>
-            <div id="tagline-wrapper" class="col-md-auto text-left">
-                {% static_placeholder "tagline" %}
-            </div>
-            <div id="nav-wrapper" class="col-md-auto">
-                <ul id="main_navigation" role="menu" class="nav">
-                    {% show_menu 0 100 100 100 %}
-                </ul>
+            <div id="masthead-nav-wrapper" class="col-12 col-sm-8">
+                <nav class="navbar navbar-light navbar-expand-sm">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbar-supported-content" aria-controls="navbar-supported-content"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <i class='material-icons md-inactive align-bottom'> menu</i> Menu
+                    </button>
+                    {% show_menu 0 100 100 100 "masthead-site-navigation.html" %}
+                </nav>
             </div>
         </div>
     </div>
