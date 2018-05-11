@@ -1,0 +1,34 @@
+[
+    {
+        "pk": 1,
+        "model": "sites.site",
+        "fields": {
+            "domain": "127.0.0.1:8000",
+            "name": "dev [localhost]"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "sites.site",
+        "fields": {
+            "domain": "wiseonerealty.com",
+            "name": "Wise One Realty"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "sites.site",
+        "fields": {
+            "domain": "www.wiseonerealty.com",
+            "name": "Wise One Realty"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "sites.site",
+        "fields": {
+            "domain": "wiseone.michellemark.me",
+            "name": "Wise One Realty"
+        }
+    }
+]

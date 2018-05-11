@@ -1,0 +1,64 @@
+{% load static cms_tags menu_tags sekizai_tags %}
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description"
+          content="Wise One Realty, full service real estate brokerage in the Syracuse New York area.  With a low one
+                   percent listing fee we are saving Central NY thousands of dollars in realtor fees.">
+    <meta name="author" content="Michelle Mark">
+        <title>{% if page_title %}{{ page_title }}{% else %}{% block title %}{% page_attribute page_title %}{% endblock title %}{% endif %}</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        {% block extra_head %}{% endblock extra_head %}
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/wiseone-common.css' %}">
+    {% if extra_css %}
+        {% for css in extra_css %}
+            <link rel="stylesheet" href="{% static css %}" />
+        {% endfor %}
+    {% endif %}
+    {% render_block "css" %}
+</head>
+<body>
+    <a href="#main-content" class="sr-only">Skip to main content</a>
+    {% cms_toolbar %}
+    <div id="sitewide-masthead" class="container-fluid">
+        <div class="row">
+            <div id="logo-wrapper" class="col-sm-3">
+                <a href="/">
+                    <img src="{% static 'images/WiseOneRealty-94x99.png' %}" alt="Wise One Realty logo">
+                </a>
+            </div>
+            <div id="tagline-wrapper" class="col-md-auto text-left">
+                {% static_placeholder "tagline" %}
+            </div>
+            <div id="nav-wrapper" class="col-md-auto">
+                <ul id="main_navigation" role="menu" class="nav">
+                    {% show_menu 0 100 100 100 %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <main id="main-content" class="container-fluid">
+        <div class="row">
+            {% block content %}{% endblock content %}
+        </div>
+    </main>
+    <footer id="sitewide-footer" class="container-fluid footer">
+        {% static_placeholder "footer" %}
+    </footer>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    {% if extra_javascript %}
+        {% for js in extra_javascript %}
+            <script type="text/javascript" src="{% static js %}"></script>
+        {% endfor %}
+    {% endif %}
+    {% render_block "js" %}
+</body>
+</html>

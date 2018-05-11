@@ -1,0 +1,21 @@
+{% extends "admin/base.html" %}
+{% load admin_static %}
+{% block blockbots %}
+  {{ block.super }}
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{% static 'admin/css/responsive.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static "admin/css/responsive_rtl.css" %}" />
+{% endblock %}
+{% block extrastyle %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/wiseone-admin.css' %}" media="all">
+{% endblock %}
+{% block branding %}
+    <img src="{% static 'images/WiseOneRealty-94x99.png' %}" class="img-responsive">
+{% endblock %}
+{% block footer %}
+    <div id="footer">
+    Copyright &copy; 2018 Wise One Realty
+    <br>
+    Developed by <a href="https://michellemark.me/" target="_blank">Michelle Mark</a>
+    </div>
+{% endblock %}
