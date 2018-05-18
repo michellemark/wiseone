@@ -1,0 +1,31 @@
+{% load i18n cms_tags staticfiles sekizai_tags %}
+
+{# show iframe if embed_link is provided #}
+<div class="video-player-wrapper paragraph">
+    {% if instance.label %}
+        <h6>{{ instance.label }}</h6>
+    {% endif %}
+
+    {% if instance.poster %}
+    <div {{ instance.attributes_str }}>
+        <div class="poster">
+            <img src="{% static 'images/icons/icon-play.png' %}" class="play-btn" alt="Play button">
+            <img src="{{ instance.poster.url }}" alt="Video Preview">
+        </div>
+
+        <div class="video-wrapper">
+            <div class="yt-player" id="player_{{ instance.embed_link }}" data-video="{{ instance.embed_link }}"></div>
+        </div>
+    </div>
+    {% endif %}
+</div>
+
+
+{% comment %}
+    # Available variables:
+    {{ instance.template }}
+    {{ instance.label }}
+    {{ instance.embed_link }}
+    {{ instance.poster }}
+    {{ instance.attributes_str }}
+{% endcomment %}

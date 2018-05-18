@@ -99,10 +99,6 @@ INSTALLED_APPS = (
     'menus',
     'sekizai',
     'treebeard',
-    'djangocms_text_ckeditor',
-    'filer',
-    'djangocms_link',
-    'djangocms_picture',
     'djangocms_bootstrap4',
     'djangocms_bootstrap4.contrib.bootstrap4_alerts',
     'djangocms_bootstrap4.contrib.bootstrap4_badge',
@@ -118,6 +114,19 @@ INSTALLED_APPS = (
     'djangocms_bootstrap4.contrib.bootstrap4_picture',
     'djangocms_bootstrap4.contrib.bootstrap4_tabs',
     'djangocms_bootstrap4.contrib.bootstrap4_utilities',
+    'aldryn_apphooks_config',
+    'aldryn_categories',
+    'aldryn_common',
+    'aldryn_newsblog',
+    'aldryn_people',
+    'aldryn_translation_tools',
+    'parler',
+    'sortedm2m',
+    'taggit',
+    'djangocms_text_ckeditor',
+    'filer',
+    'djangocms_link',
+    'djangocms_picture',
     'easy_thumbnails',
     'djangocms_file',
     'djangocms_style',
@@ -144,14 +153,29 @@ CMS_LANGUAGES = {
         'hide_untranslated': False,
     },
 }
+PARLER_LANGUAGES = {
+    1: (
+        {'code': 'en'},
+    ),
+    'default': {
+        'fallbacks': ['en'],
+        'hide_untranslated': False,
+    }
+}
 CMS_TEMPLATES = (
     ('fullwidth.html', 'Fullwidth'),
     ('sidebar_left.html', 'Sidebar Left'),
     ('sidebar_right.html', 'Sidebar Right'),
-    ('homepage.html', "Home Page")
+    ('homepage.html', "Home Page"),
+    ('template_blog.html', 'Blog Template'),
+    ('coming-soon.html', 'Coming Soon Page'),
 )
 CMS_PERMISSION = True
-CMS_PLACEHOLDER_CONF = {}
+CMS_PLACEHOLDER_CONF = {
+    'banner_image': {
+        'plugins': ['Bootstrap4PicturePlugin',]
+    },
+}
 DATABASES = {
     'default': {
         'ENGINE': os.environ.get('DB_ENGINE'),
@@ -163,12 +187,27 @@ DATABASES = {
         'CONN_MAX_AGE': 600,
     }
 }
+THUMBNAIL_HIGH_RESOLUTION = True
 THUMBNAIL_PROCESSORS = (
     'easy_thumbnails.processors.colorspace',
     'easy_thumbnails.processors.autocrop',
     'filer.thumbnail_processors.scale_and_crop_with_subject_location',
-    'easy_thumbnails.processors.filters'
+    'easy_thumbnails.processors.filters',
+    'easy_thumbnails.processors.background',
 )
+CMSPLUGIN_FILER_IMAGE_STYLE_CHOICES = (
+    ('default', 'Default'),
+    ('boxed', 'Boxed'),
+)
+CMSPLUGIN_FILER_IMAGE_DEFAULT_STYLE = 'boxed'
+DJANGOCMS_PICTURE_TEMPLATES = [
+    ('match_height', 'Match Height'),
+    ('tile_overlay', 'Caption Overlay'),
+    ('inline', 'Inline'),
+    ('fullwidth', 'Full-Width'),
+    ('display-desktop', 'Display Desktop/Tablet Only'),
+    ('display-mobile', 'Display Mobile Only'),
+]
 DJANGOCMS_BOOTSTRAP4_TAG_CHOICES = ['div', 'section', 'article', 'header', 'footer', 'aside']
 DJANGOCMS_BOOTSTRAP4_CAROUSEL_TEMPLATES = (
     ('default', 'Default'),
@@ -183,7 +222,7 @@ DJANGOCMS_BOOTSTRAP4_GRID_COLUMN_CHOICES = (
     ('w-100', 'Break'),
     ('', 'Empty')
 )
-DJANGOCMS_BOOTSTRAP4_USE_ICONS = True
+DJANGOCMS_BOOTSTRAP4_USE_ICONS = False
 DJANGOCMS_BOOTSTRAP4_TAB_TEMPLATES = (
     ('default', 'Default'),
 )

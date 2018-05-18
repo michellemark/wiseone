@@ -22,13 +22,5 @@
             "domain": "www.wiseonerealty.com",
             "name": "Wise One Realty"
         }
-    },
-    {
-        "pk": 3,
-        "model": "sites.site",
-        "fields": {
-            "domain": "wiseone.michellemark.me",
-            "name": "Wise One Realty"
-        }
     }
 ]

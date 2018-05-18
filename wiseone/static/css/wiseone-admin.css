@@ -22,3 +22,6 @@ select.filtered {
     color: #737E21 !important;
     font-weight: bold;
 }
+#changelist-search img {
+    max-width: 20px;
+}
