@@ -1,8 +1,22 @@
 {% extends "base.html" %}
 {% load cms_tags %}
 {% block content %}
-    <div id="home-jumbotron">
-        {% placeholder "home_jumbotron" %}
+    <div id="home-jumbotron" class="jumbotron jumbotron-fluid">
+        <p class="top-left">
+            {% placeholder "home_jumbotron_top_left" %}
+        </p>
+        <p class="top-right">
+            {% placeholder "home_jumbotron_top_right" %}
+        </p>
+        <p class="bottom-left">
+            {% placeholder "home_jumbotron_bottom_left" %}
+        </p>
+        <p class="bottom-right">
+            {% placeholder "home_jumbotron_bottom_right" %}
+        </p>
+        <p class="centered">
+            {% placeholder "home_jumbotron_centered" %}
+        </p>
     </div>
     <div class="container-fluid">
         <div class="col-sm-12">

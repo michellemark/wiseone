@@ -258,9 +258,12 @@ blockquote.blockquote cite {
 #home-jumbotron {
     display: block;
     width: 100%;
-    margin: -2em -15px 0 15px !important;
-    padding: 0;
+    height: 400px;
+    margin: -2em -15px 2em 15px !important;
+    padding: 1em;
     position: relative;
+    background-size: cover;
+    background: url(/static/images/House.jpg) 0 50%;
 }
 #home-jumbotron .jumbotron {
     margin: 0;

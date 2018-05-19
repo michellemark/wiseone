@@ -175,8 +175,20 @@ CMS_PLACEHOLDER_CONF = {
     'banner_image': {
         'plugins': ['Bootstrap4PicturePlugin',]
     },
-    'home_jumbotron': {
-        'plugins': ['Bootstrap4JumbotronPlugin',]
+    'home_jumbotron_top_left': {
+        'plugins': ['TextPlugin',]
+    },
+    'home_jumbotron_top_right': {
+        'plugins': ['TextPlugin',]
+    },
+    'home_jumbotron_bottom_left': {
+        'plugins': ['TextPlugin',]
+    },
+    'home_jumbotron_bottom_right': {
+        'plugins': ['TextPlugin',]
+    },
+    'home_jumbotron_centered': {
+        'plugins': ['TextPlugin',]
     }
 }
 DATABASES = {
