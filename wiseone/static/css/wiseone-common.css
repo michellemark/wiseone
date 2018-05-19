@@ -269,29 +269,30 @@ blockquote.blockquote cite {
     margin: 0;
     padding: 0;
 }
-#home-jumbotron p {
+#home-jumbotron div {
+    display: block;
     position: absolute;
     color: #ffffff;
     font-size: 1.8em;
     z-index: 25;
 }
-#home-jumbotron p.top-left {
+#home-jumbotron div.top-left {
     top: 2em;
     left: 2em;
 }
-#home-jumbotron p.top-right {
+#home-jumbotron div.top-right {
     top: 2em;
     right: 2em;
 }
-#home-jumbotron p.bottom-right {
+#home-jumbotron div.bottom-right {
     bottom: 2em;
     right: 2em;
 }
-#home-jumbotron p.bottom-left {
+#home-jumbotron div.bottom-left {
     bottom: 2em;
     left: 2em;
 }
-#home-jumbotron p.centered {
+#home-jumbotron div.centered {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
