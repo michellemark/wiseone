@@ -175,6 +175,9 @@ CMS_PLACEHOLDER_CONF = {
     'banner_image': {
         'plugins': ['Bootstrap4PicturePlugin',]
     },
+    'home_jumbotron': {
+        'plugins': ['Bootstrap4JumbotronPlugin',]
+    }
 }
 DATABASES = {
     'default': {

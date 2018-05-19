@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 {% load cms_tags %}
 {% block content %}
+    <div id="home-jumbotron">
+        {% placeholder "home_jumbotron" %}
+    </div>
     <div class="container-fluid">
         <div class="col-sm-12">
             {% placeholder "content" %}
