@@ -5,6 +5,8 @@
 Settings for wiseonerealty.com project.
 """
 import os
+from django.core.urlresolvers import reverse_lazy
+
 gettext = lambda s: s
 DATA_DIR = os.path.dirname(os.path.dirname(__file__))
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -74,6 +76,7 @@ MIDDLEWARE = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django_mfa.middleware.MfaMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -95,6 +98,7 @@ INSTALLED_APPS = (
     'django.contrib.sitemaps',
     'django.contrib.staticfiles',
     'django.contrib.messages',
+    'django_mfa',
     'cms',
     'menus',
     'sekizai',
@@ -170,7 +174,8 @@ CMS_TEMPLATES = (
     ('template_blog.html', 'Blog Template'),
     ('coming-soon.html', 'Coming Soon Page'),
 )
-CMS_PERMISSION = True
+CMS_PERMISSION = False
+CMS_TOOLBAR_ANONYMOUS_ON = False
 CMS_PLACEHOLDER_CONF = {
     'banner_image': {
         'plugins': ['Bootstrap4PicturePlugin',]
@@ -212,16 +217,22 @@ THUMBNAIL_PROCESSORS = (
 )
 CMSPLUGIN_FILER_IMAGE_STYLE_CHOICES = (
     ('default', 'Default'),
-    ('boxed', 'Boxed'),
-)
-CMSPLUGIN_FILER_IMAGE_DEFAULT_STYLE = 'boxed'
-DJANGOCMS_PICTURE_TEMPLATES = [
-    ('match_height', 'Match Height'),
-    ('tile_overlay', 'Caption Overlay'),
-    ('inline', 'Inline'),
     ('fullwidth', 'Full-Width'),
     ('display-desktop', 'Display Desktop/Tablet Only'),
     ('display-mobile', 'Display Mobile Only'),
+    ('match_height', 'Match Height'),
+    ('tile_overlay', 'Caption Overlay'),
+    ('inline', 'Inline'),
+)
+CMSPLUGIN_FILER_IMAGE_DEFAULT_STYLE = 'boxed'
+DJANGOCMS_PICTURE_TEMPLATES = [
+    ('fullwidth', 'Full-Width'),
+    ('match_height', 'Match Height'),
+    ('tile_overlay', 'Caption Overlay'),
+    ('inline', 'Inline'),
+    ('display-desktop', 'Display Desktop/Tablet Only'),
+    ('display-mobile', 'Display Mobile Only'),
+    ('default', 'Default'),
 ]
 DJANGOCMS_BOOTSTRAP4_TAG_CHOICES = ['div', 'section', 'article', 'header', 'footer', 'aside']
 DJANGOCMS_BOOTSTRAP4_CAROUSEL_TEMPLATES = (
@@ -249,3 +260,8 @@ DJANGOCMS_BOOTSTRAP4_SPACER_SIZES = (
     ('4', '* 1.5'),
     ('5', '* 3'),
 )
+GOOGLE_API_KEY = os.environ.get("GOOGLE_API_KEY")
+DJANGOCMS_VIDEO_TEMPLATES = [
+    ('default', 'Default'),
+    ('responsive', 'Responsive'),
+]
