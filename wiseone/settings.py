@@ -136,6 +136,7 @@ INSTALLED_APPS = (
     'djangocms_style',
     'djangocms_googlemap',
     'djangocms_video',
+    'light_gallery',
     'wiseone'
 )
 LANGUAGES = (
@@ -168,6 +169,7 @@ PARLER_LANGUAGES = {
 }
 CMS_TEMPLATES = (
     ('fullwidth.html', 'Fullwidth'),
+    ('fullwidth-narrow-margins.html', 'Fullwidth Narrow Margins'),
     ('sidebar_left.html', 'Sidebar Left'),
     ('sidebar_right.html', 'Sidebar Right'),
     ('homepage.html', "Home Page"),
@@ -228,15 +230,16 @@ CMSPLUGIN_FILER_IMAGE_DEFAULT_STYLE = 'boxed'
 DJANGOCMS_PICTURE_TEMPLATES = [
     ('fullwidth', 'Full-Width'),
     ('match_height', 'Match Height'),
-    ('tile_overlay', 'Caption Overlay'),
-    ('inline', 'Inline'),
+    ('overlay_caption', 'Overlay Caption'),
     ('display-desktop', 'Display Desktop/Tablet Only'),
     ('display-mobile', 'Display Mobile Only'),
     ('default', 'Default'),
+    ('inline', 'Inline'),
 ]
-DJANGOCMS_BOOTSTRAP4_TAG_CHOICES = ['div', 'section', 'article', 'header', 'footer', 'aside']
+DJANGOCMS_BOOTSTRAP4_TAG_CHOICES = ['div', 'section', 'article', 'header', 'footer', 'aside', 'button']
 DJANGOCMS_BOOTSTRAP4_CAROUSEL_TEMPLATES = (
     ('default', 'Default'),
+    ('material_icons', 'Material Icons'),
 )
 DJANGOCMS_BOOTSTRAP4_GRID_SIZE = 12
 DJANGOCMS_BOOTSTRAP4_GRID_CONTAINERS = (

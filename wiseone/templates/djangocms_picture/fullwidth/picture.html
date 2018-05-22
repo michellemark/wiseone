@@ -5,7 +5,7 @@
     {% if instance.link_target %} target="{{ instance.link_target }}"{% endif %}
     {{ instance.link_attributes_str }}>
 {% endif %}
-<img class="photo full-width" src="{% spaceless %}
+<img class="photo full-width {{ instance.attributes.class }}" src="{% spaceless %}
     {% if instance.external_picture %}
         {{ instance.external_picture }}
     {% elif instance.use_no_cropping %}

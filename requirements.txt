@@ -32,6 +32,7 @@ djangocms-file==2.0.2
 djangocms-googlemap==1.1.1
 djangocms-icon==1.0.0
 djangocms-installer==1.0.0
+djangocms-light-gallery==0.0.7
 djangocms-link==2.1.2
 djangocms-picture==2.0.6
 djangocms-style==2.0.2
