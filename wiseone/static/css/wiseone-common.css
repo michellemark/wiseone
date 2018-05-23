@@ -403,6 +403,13 @@ blockquote.blockquote cite {
 #main-content .tab-pane > .card {
     border-radius: 0 !important;
 }
+/* headings */
+#main-content h1 {
+    margin: 1em 0;
+}
+#main-content h2 {
+    margin: 0.5em 0;
+}
 
 @media (max-width: 575px) {
     #masthead-nav-wrapper nav.navbar {
