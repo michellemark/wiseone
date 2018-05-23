@@ -419,10 +419,6 @@ blockquote.blockquote cite {
     #masthead-nav-wrapper a.nav-link {
         margin: 0;
     }
-    #masthead-nav-wrapper #navbar-supported-content,
-    #masthead-nav-wrapper button.navbar-toggler {
-        margin: 0 auto 0 0.5em !important;
-    }
     #masthead-nav-wrapper button.navbar-toggler {
         width: 98%;
         color: var(--dk-green);
@@ -434,7 +430,7 @@ blockquote.blockquote cite {
     }
     #masthead-nav-wrapper #navbar-supported-content,
     #masthead-nav-wrapper div.navbar-nav {
-        width: 99%;
+        width: 98%;
         margin: 0;
     }
     #masthead-nav-wrapper a {
@@ -459,5 +455,21 @@ blockquote.blockquote cite {
     }
     #blog-wrapper {
         margin: 1em;
+    }
+    #home-jumbotron {
+        position: static;
+        background-color: var(--white);
+    }
+    #home-jumbotron div.top-left,
+    #home-jumbotron div.centered {
+        font-size: 1.2em;
+        position: static;
+        padding: 0.5em;
+        color: var(--black);
+    }
+    #home-jumbotron div.top-right,
+    #home-jumbotron div.bottom-right,
+    #home-jumbotron div.bottom-left {
+        display: none;
     }
 }
