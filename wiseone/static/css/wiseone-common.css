@@ -430,8 +430,8 @@ blockquote.blockquote cite {
     }
     #masthead-nav-wrapper #navbar-supported-content,
     #masthead-nav-wrapper div.navbar-nav {
-        width: 98%;
-        margin: 0;
+        width: 87%;
+        margin: 0 !important;
     }
     #masthead-nav-wrapper a {
         padding: 1em;
