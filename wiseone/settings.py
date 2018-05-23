@@ -266,8 +266,7 @@ DJANGOCMS_BOOTSTRAP4_SPACER_SIZES = (
     ('4', '* 1.5'),
     ('5', '* 3'),
 )
-GOOGLE_API_KEY = os.environ.get("GOOGLE_API_KEY")
+DJANGOCMS_GOOGLEMAP_API_KEY = os.environ.get("GOOGLE_API_KEY")
 DJANGOCMS_VIDEO_TEMPLATES = [
-    ('default', 'Default'),
     ('responsive', 'Responsive'),
 ]
