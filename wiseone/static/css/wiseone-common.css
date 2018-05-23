@@ -454,7 +454,8 @@ blockquote.blockquote cite {
         background-color: var(--yellow) !important;
     }
     #blog-wrapper {
-        margin: 1em;
+        padding: 0;
+        margin: 0;
     }
     #home-jumbotron {
         position: static;

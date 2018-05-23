@@ -185,20 +185,8 @@ CMS_PLACEHOLDER_CONF = {
     'home_jumbotron_image': {
         'plugins': ['Bootstrap4PicturePlugin',]
     },
-    'home_jumbotron_top_left': {
-        'plugins': ['TextPlugin', 'Bootstrap4LinkPlugin']
-    },
-    'home_jumbotron_top_right': {
-        'plugins': ['TextPlugin', 'Bootstrap4LinkPlugin']
-    },
-    'home_jumbotron_bottom_left': {
-        'plugins': ['TextPlugin', 'Bootstrap4LinkPlugin']
-    },
-    'home_jumbotron_bottom_right': {
-        'plugins': ['TextPlugin', 'Bootstrap4LinkPlugin']
-    },
-    'home_jumbotron_centered': {
-        'plugins': ['TextPlugin', 'Bootstrap4LinkPlugin']
+    'home_jumbotron_overlay': {
+        'plugins': ['TextPlugin', 'Bootstrap4LinkPlugin', 'Bootstrap4GridRowPlugin']
     }
 }
 DATABASES = {
