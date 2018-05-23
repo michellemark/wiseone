@@ -408,7 +408,7 @@ blockquote.blockquote cite {
     margin: 0.5em 0 1em 0;
 }
 #main-content h2 {
-    margin: 0.5em 0;
+    margin: 1em 0 0.5em 0;
 }
 
 @media (max-width: 575px) {
