@@ -1,5 +1,6 @@
 {% extends "aldryn_newsblog/base.html" %}
 {% load i18n cms_tags apphooks_config_tags %}
+{% if article.published %}
 {% block title %}
     {{ article.title }} - {{ block.super }}
 {% endblock %}
@@ -31,3 +32,4 @@
         {% endif %}
     </ul>
 {% endblock %}
+{% endif %}
