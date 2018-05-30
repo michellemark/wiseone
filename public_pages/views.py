@@ -52,3 +52,13 @@ class SellersInfoView(TemplateView):
         context['page_title'] = "Sell my CNY Home with Wise One Realty"
 
         return context
+
+
+class HomeEvaluationView(TemplateView):
+    template_name = 'home-evaluation.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(HomeEvaluationView, self).get_context_data()
+        context['page_title'] = "Free Home Evaluation from Wise One Realty"
+
+        return context

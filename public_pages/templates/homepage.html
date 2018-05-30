@@ -8,7 +8,7 @@
                 <h5>
                     Full service Syracuse NY realtor, 1% listing agent fee.
                 </h5>
-                <a href="/about/" class="btn btn-light btn-sm">
+                <a href="{% url 'aboutus' %}" class="btn btn-light btn-sm">
                     Learn More
                 </a>
             </div>
@@ -26,7 +26,7 @@
                     Keep thousands in your hands at the closing table!
                 </p>
                 <div class="text-center">
-                    <a href="/about/" class="btn btn-primary btn-lg">
+                    <a href="{% url 'homeevaluation' %}" class="btn btn-primary btn-lg">
                         Free Home Evaluation
                     </a>
                 </div>
@@ -82,7 +82,9 @@
                 <div class="card">
                     <div class="card-body">
                         <h2 class="card-title">
-                            <strong>Sellers</strong>
+                            <a href="{% url 'sellersinfo' %}">
+                                <strong>Selling a home</strong>
+                            </a>
                         </h2>
                         <hr>
                         <p>
@@ -93,7 +95,7 @@
                             dictum sagittis. Vivamus at felis imperdiet, iaculis mi sit amet, ultrices sapien.
                         </p>
                         <div class="text-center">
-                            <a href="/about/" class="btn btn-primary btn-lg">
+                            <a href="{% url 'homeevaluation' %}" class="btn btn-primary btn-lg">
                                 Free Home Evaluation
                             </a>
                         </div>
@@ -104,7 +106,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h2 class="card-title">
-                            <strong>Buyers</strong>
+                            <strong>Buying a home</strong>
                         </h2>
                         <hr>
                         <p>
@@ -115,7 +117,7 @@
                             dictum sagittis. Vivamus at felis imperdiet, iaculis mi sit amet, ultrices sapien.
                         </p>
                         <div class="text-center">
-                            <a href="/about/" class="btn btn-primary btn-lg">
+                            <a href="{% url 'buyersinfo' %}" class="btn btn-primary btn-lg">
                                 Learn More
                             </a>
                         </div>
