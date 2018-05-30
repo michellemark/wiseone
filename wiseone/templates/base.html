@@ -14,7 +14,7 @@
         {% block extra_head %}{% endblock extra_head %}
     {% render_block "css" %}
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-    <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     {% if extra_css %}
@@ -27,7 +27,7 @@
     <a href="#main-content" class="sr-only">Skip to main content</a>
     {% cms_toolbar %}
     {% include "masthead.html" %}
-    <main id="main-content" class="bg-white">
+    <main id="main-content" class="bg-white pb-5">
         {% block content %}{% endblock content %}
     </main>
     {% include "footer.html" %}

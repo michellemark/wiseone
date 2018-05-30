@@ -1,5 +1,5 @@
 {% load static %}
-<div id="sitewide-masthead" class="container-fluid bg-white">
+<div id="sitewide-masthead" class="container-fluid bg-white pt-2 pl-2 pb-2 pr-0">
     <div class="row">
         <div id="logo-wrapper" class="col-12 col-sm-4">
             <a href="/">
@@ -14,13 +14,55 @@
                 </div>
             </div>
         </div>
-        <div id="masthead-nav-wrapper" class="col-12 col-sm-8">
-            <nav class="navbar navbar-light navbar-expand-sm">
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbar-supported-content" aria-controls="navbar-supported-content"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <i class='material-icons md-inactive align-bottom'> menu</i> Menu
+        <div id="masthead-nav-wrapper" class="col-12 col-sm-8 m-0 p-0">
+            <nav class="navbar navbar-expand-md navbar-light bg-white">
+                <button class="navbar-toggler text-primary" type="button" data-toggle="collapse" data-target="#navbar-sitewide"
+                        aria-controls="navbar-sitewide" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span> Menu
                 </button>
+                <div class="collapse navbar-collapse" id="navbar-sitewide">
+                    <ul class="navbar-nav justify-content-end ml-auto mr-3 ">
+                        <li class="nav-item">
+                            <a class="nav-link py-3 pl-3 pr-0 text-primary" href="{% url 'home' %}">
+                                <i class="fas fa-home"></i>
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-item nav-link py-3 pl-3 pr-0 text-primary" href="{% url 'aboutus' %}">
+                                <i class="fas fa-id-card"></i>
+                                About
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-item nav-link py-3 pl-3 pr-0 text-primary" href="/cny-real-estate/news/">
+                                <i class="fas fa-glasses"></i>
+                                News
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-item nav-link py-3 pl-3 pr-0 text-primary" href="{% url 'buyersinfo' %}">
+                                <i class="fas fa-box-open"></i>
+                                Buyers
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle py-3 pl-3 pr-0 text-primary" href="{% url 'sellersinfo' %}"
+                               id="navbar-seller-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-sign"></i> Sellers
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbar-seller-dropdown">
+                                <a class="dropdown-item text-primary py-3 px-5" href="{% url 'sellersinfo' %}">
+                                    Seller Information
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item text-primary py-3 px-5" href="#">
+                                    Free Home Evaluation
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </nav>
         </div>
     </div>
