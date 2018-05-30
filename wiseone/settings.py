@@ -137,7 +137,7 @@ INSTALLED_APPS = (
     'djangocms_googlemap',
     'djangocms_video',
     'light_gallery',
-    'wiseone'
+    'public_pages'
 )
 LANGUAGES = (
     ('en', gettext('en')),
@@ -179,6 +179,10 @@ CMS_TEMPLATES = (
 CMS_PERMISSION = False
 CMS_TOOLBAR_ANONYMOUS_ON = False
 CMS_PLACEHOLDER_CONF = {
+    'home_featured_article': {
+        'name': 'Home Featured Article',
+        'plugins': ['NewsBlogFeaturedArticlesPlugin', 'Bootstrap4PicturePlugin', 'TextPlugin']
+    },
     'banner_image': {
         'plugins': ['Bootstrap4PicturePlugin',]
     },

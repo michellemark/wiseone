@@ -15,7 +15,8 @@ urlpatterns = [
     url(r'^settings/', include('django_mfa.urls', namespace="mfa")),
     url(r'^sitemap\.xml$', sitemap, {'sitemaps': {'cmspages': CMSSitemap}}),
     url(r'^wise-admin/', include(admin.site.urls)),
-    url(r'^', include('cms.urls')),
+    url(r'^cny-real-estate/', include('cms.urls')),
+    url(r'^', include('public_pages.urls')),
 ]
 
 if settings.DEBUG:

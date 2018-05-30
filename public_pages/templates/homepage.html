@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+{% load static cms_tags %}
+{% block content %}
+    <div class="jumbotron jumbotron-fluid m-0 p-0">
+        <div class="card text-left">
+            <img class="card-img-top" src="{% static 'images/stock_images/NY_view-1200x400.jpg' %}" alt="Image of NYC">
+            <div class="card-img-overlay text-white">
+                <h4 class="card-title">
+                    Full service Syracuse NY realtor, 1% listing agent fee.
+                </h4>
+                <a href="/about/" class="btn btn-primary btn-lg">
+                    Learn More
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 my-4">
+                <h1 class="display-4">
+                    Wise One Realty
+                </h1>
+                <p>
+                    Where wise home owners come to save money.  We provide full service to CNY home owners for a low
+                    one percent listing agent fee.  We will happily provide a free evaluation of your home's list value.
+                    Keep thousands in your hands at the closing table!
+                </p>
+                <div class="text-center">
+                    <a href="/about/" class="btn btn-primary btn-lg">
+                        Free Home Evaluation
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body bg-light">
+                        <div class="card-title lead text-primary">
+                            Central New York Counties We Serve
+                        </div>
+                        <div class="row">
+                            <div class="card-text col-12 col-sm-6">
+                                <img src="{% static 'images/stock_images/service_area_map.png' %}" alt="Map of our service area"
+                                     class="card-img img-fluid rounded">
+                            </div>
+                            <div class="card-text col-12 col-sm-6">
+                                <ul class="list-group mx-0 px-0">
+                                    <li class="list-group-item list-group-item-action list-group-item-primary">
+                                        Cayuga
+                                    </li>
+                                    <li class="list-group-item list-group-item-action list-group-item-primary">
+                                        Cortland
+                                    </li>
+                                    <li class="list-group-item list-group-item-action list-group-item-primary">
+                                        Jefferson
+                                    </li>
+                                    <li class="list-group-item list-group-item-action list-group-item-primary">
+                                        Lewis
+                                    </li>
+                                    <li class="list-group-item list-group-item-action list-group-item-primary">
+                                        Madison
+                                    </li>
+                                    <li class="list-group-item list-group-item-action list-group-item-primary">
+                                        Oneida
+                                    </li>
+                                    <li class="list-group-item list-group-item-action list-group-item-primary">
+                                        Oswego
+                                    </li>
+                                    <li class="list-group-item list-group-item-action list-group-item-primary">
+                                        Onondaga
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6 my-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">
+                            <strong>Sellers</strong>
+                        </h2>
+                        <hr>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eleifend blandit ligula
+                            eget convallis. Curabitur pellentesque turpis vestibulum, molestie lorem ac, vehicula massa.
+                            Nullam a cursus dui. Duis tincidunt enim eget felis iaculis semper. Donec egestas justo
+                            vitae purus consequat, accumsan placerat tellus scelerisque. Suspendisse fringilla leo quis
+                            dictum sagittis. Vivamus at felis imperdiet, iaculis mi sit amet, ultrices sapien.
+                        </p>
+                        <div class="text-center">
+                            <a href="/about/" class="btn btn-primary btn-lg">
+                                Free Home Evaluation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 my-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">
+                            <strong>Buyers</strong>
+                        </h2>
+                        <hr>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eleifend blandit ligula
+                            eget convallis. Curabitur pellentesque turpis vestibulum, molestie lorem ac, vehicula massa.
+                            Nullam a cursus dui. Duis tincidunt enim eget felis iaculis semper. Donec egestas justo
+                            vitae purus consequat, accumsan placerat tellus scelerisque. Suspendisse fringilla leo quis
+                            dictum sagittis. Vivamus at felis imperdiet, iaculis mi sit amet, ultrices sapien.
+                        </p>
+                        <div class="text-center">
+                            <a href="/about/" class="btn btn-primary btn-lg">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 my-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">
+                            <strong>Featured News</strong>
+                        </h2>
+                        <hr>
+                        {% render_placeholder object.home_featured_article %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

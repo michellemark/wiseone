@@ -1,0 +1,82 @@
+$blue: #29657d !default;
+$indigo: #33297d !default;
+$purple: #6b4e71 !default;
+$pink: #F8D7DA !default;
+$red: #A42724 !default;
+$orange: #fd7e14 !default;
+$orange-hover: #f6c837 !default;
+$yellow: #F6F8DD !default;
+$md-yellow: #E9EEAE !default;
+$lt-green-yellow: #FAFBF3 !default;
+$bright-green: #689F38 !default;
+$bright-hover-green: #76B540 !default;
+$lt-green-bg: #D5F0C1 !default;
+$lt-green: #c2cf39 !default;
+$green: #737d29 !default;
+$green-hover: #919d34 !default;
+$dk-green: #515917 !default;
+$teal: #53687e !default;
+$teal-hover: #617A94 !default;
+$cyan: #D5E3F0 !default;
+$lt-brown: #9c9188 !default;
+$md-brown: #83756a !default;
+$dk-brown: #5e4e3b !default;
+$colors: () !default;
+$colors: map-merge((
+  "blue":       $blue,
+  "indigo":     $indigo,
+  "purple":     $purple,
+  "pink":       $pink,
+  "red":        $red,
+  "orange":     $orange,
+  "yellow":     $yellow,
+  "green":      $green,
+  "teal":       $teal,
+  "cyan":       $cyan,
+), $colors);
+$white:    #ffffff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000000 !default;
+$grays: () !default;
+$grays: map-merge((
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900
+), $grays);
+
+$primary:       $green !default;
+$secondary:     $dk-brown !default;
+$success:       $lt-green !default;
+$info:          $teal !default;
+$warning:       $md-yellow !default;
+$danger:        $red !default;
+$light:         $gray-200 !default;
+$dark:          $gray-900 !default;
+
+$theme-colors: () !default;
+$theme-colors: map-merge((
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+), $theme-colors);
+
+@import "node_modules/bootstrap/scss/bootstrap";
