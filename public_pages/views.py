@@ -50,6 +50,8 @@ class SellersInfoView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super(SellersInfoView, self).get_context_data()
         context['page_title'] = "Sell my CNY Home with Wise One Realty"
+        context['extra_css'] = ['css/savings-range-slider.css']
+        context['extra_javascript'] = ['js/savings-range-slider.js']
 
         return context
 

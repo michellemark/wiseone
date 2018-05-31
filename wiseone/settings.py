@@ -42,6 +42,7 @@ MEDIA_ROOT = os.environ.get("MEDIA_ROOT", "media")
 STATIC_ROOT = os.environ.get("STATIC_ROOT", "static")
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'wiseone', 'static'),
+    os.path.join(BASE_DIR, 'public_pages', 'static'),
 )
 FIXTURE_DIRS = [
     os.path.join(BASE_DIR, "fixtures"),

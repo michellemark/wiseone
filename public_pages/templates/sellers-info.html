@@ -17,5 +17,29 @@
                 </p>
             </div>
         </div>
+        <div class="row">
+            <div class="card col-12">
+                <div class="card-body bg-dark text-light text-center my-5 p-5">
+                    <div class="mb-3">
+                        <h3>
+                            How much you can save selling your house with Wise One Realty?
+                        </h3>
+                    </div>
+                    <h2 class="my-4">
+                        <strong>Estimated savings:<span class="text-success">
+                        <span id="money-saved-value"></span></span></strong>
+                    </h2>
+                    <div class="col-12 mb-5">
+                        <h4 class="mb-5">
+                            Expected Sale Price: <span id="current-home-value"></span>
+                        </h4>
+                        <input id="savings-slider" type="range" min="10000" max="1000000" value="150000" step="1000">
+                    </div>
+                    <p class="lead my-3">
+                        Find out!  Drag the house to your expected sale price to see your savings.
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock content %}
