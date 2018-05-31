@@ -212,3 +212,7 @@ blockquote.blockquote cite {
 #main-content .tab-pane > .card {
     border-radius: 0 !important;
 }
+/* Fix Facebook share button alignment */
+.fb_iframe_widget span {
+    vertical-align: baseline !important;
+}
