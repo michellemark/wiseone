@@ -13,6 +13,7 @@
     background: linear-gradient(to right, #737d29 0%,#c2cf39 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#737d29', endColorstr='#c2cf39',GradientType=1 );
 }
+#savings-slider::-moz-range-thumb,
 #savings-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
@@ -24,9 +25,10 @@
     cursor: pointer;
 }
 #savings-slider::-moz-range-thumb {
-    width: 75px;
-    height: 75px;
-    border: 0;
-    background: transparent url('/static/images/icons/home-green.png') no-repeat 0 0;
+    width: 78px;
+    height: 78px;
+    border: 2px solid #737d29;
+    border-top: 2px solid #c2cf39;
+    background: #e9ecef url('/static/images/icons/home-green.png') no-repeat;
     cursor: pointer;
 }

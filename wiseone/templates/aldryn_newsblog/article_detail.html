@@ -6,30 +6,32 @@
 {% endblock %}
 {% block newsblog_content %}
     {% include "aldryn_newsblog/includes/article.html" with detail_view="true" %}
+    <hr class="my-5">
     {% static_placeholder "newsblog_social" %}
-    <ul class="article-footer-nav">
+    <ul class="article-footer-nav list-unstyled">
         {% if prev_article %}
-            <li>
+            <li class="d-block d-sm-inline-block mx-2 my-4">
                 <a href="{{ prev_article.get_absolute_url }}">
-                    <i class="material-icons md-18">chevron_left</i>
+                    <i class="fas fa-angle-left"></i>
                     {% trans "Previous Article" %}
                 </a>
             </li>
         {% endif %}
-        <li>
+        <li class="d-block d-sm-inline-block mx-2 my-4">
             <a href="{% namespace_url "article-list" %}">
-                <i class="material-icons md-18">home</i>
+                <i class="fas fa-home"></i>
                 {% trans "Back to Blog Home" %}
             </a>
         </li>
         {% if next_article %}
-            <li>
+            <li class="d-block d-sm-inline-block mx-2 my-4">
                 <a href="{{ next_article.get_absolute_url }}">
                     {% trans "Next Article" %}
-                    <i class="material-icons md-18">chevron_right</i>
+                    <i class="fas fa-angle-right"></i>
                 </a>
             </li>
         {% endif %}
     </ul>
+    <hr class="my-5">
 {% endblock %}
 {% endif %}

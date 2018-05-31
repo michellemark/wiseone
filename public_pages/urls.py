@@ -7,10 +7,10 @@ from public_pages.views import HomeView, ComingSoonView, AboutWiseOneView, Buyer
     HomeEvaluationView
 
 urlpatterns = [
-    url(r'^free-home-evaluation/', HomeEvaluationView.as_view(), name='homeevaluation'),
-    url(r'^home-sellers-info/', SellersInfoView.as_view(), name='sellersinfo'),
-    url(r'^home-buyer/', BuyersInfoView.as_view(), name='buyersinfo'),
-    url(r'^about/', AboutWiseOneView.as_view(), name='aboutus'),
-    url(r'^home/', HomeView.as_view(), name='home'),
-    url(r'^', ComingSoonView.as_view(), name='comingsoon'),
+    url(r'^free-home-evaluation/$', HomeEvaluationView.as_view(), name='homeevaluation'),
+    url(r'^home-sellers-info/$', SellersInfoView.as_view(), name='sellersinfo'),
+    url(r'^home-buyer/$', BuyersInfoView.as_view(), name='buyersinfo'),
+    url(r'^about/$', AboutWiseOneView.as_view(), name='aboutus'),
+    url(r'^home/$', HomeView.as_view(), name='home'),
+    url(r'^$', ComingSoonView.as_view(), name='comingsoon'),
 ]
