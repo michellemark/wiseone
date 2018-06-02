@@ -3,23 +3,26 @@
 {% block content %}
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 my-4">
-                <h1 class="display-4">
-                    Sell my home in CNY
-                </h1>
-                <h2>
-                    Wise One Realty can save you thousands in listing agent fees!
-                </h2>
-                <p>
-                    Where wise home owners come to save money.  We provide full service to CNY home owners for a low
-                    one percent listing agent fee.  We will happily provide a free evaluation of your home's list value.
-                    Keep thousands in your hands at the closing table!
-                </p>
+            <h1 class="m-5">
+                Looking to sell a home in CNY?
+            </h1>
+            <div class="card col-12 mb-4 bg-light">
+                <div class="card-body bg-light text-dark p-3">
+                    <h2 class="card-header bg-light">
+                        Wise One Realty can save you thousands in listing agent fees!
+                    </h2>
+                    <div class="card-text lead p-3">
+                        No upfront costs, no hidden fees, no catches.  Wise One offers the same full service to home
+                        owners looking to sell their home on the CNY MLS<small>&reg;</small> for an unmatched 1% listing fee, the lowest in the
+                        area!  We act as buyers agents for 3% so if we both list and sell your home you pay only
+                        4% total commission!  Keeping at least 2% in your pocket at the closing table, that's Wise.
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row">
-            <div class="card col-12">
-                <div class="card-body bg-dark text-light text-center my-5 p-5">
+            <div class="card col-12 bg-dark mb-4">
+                <div class="card-body bg-dark text-light text-center my-3 p-5">
                     <div class="mb-3">
                         <h3>
                             How much you can save selling your house with Wise One Realty?
@@ -38,6 +41,24 @@
                     <p class="lead my-3">
                         Find out!  Drag the house to your expected sale price to see your savings.
                     </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card bg-light text-dark col-12">
+                <div class="card-body my-3 p-5">
+                    <h2 class="card-header bg-light display-4">
+                        Get Wise
+                    </h2>
+                    <div class="card-text lead p-3">
+                        We get results and Save Home Sellers Thousands while only charging 1/3rd or less what other
+                        agencies require.  Contact us today to start the process with a free home evaluation.
+                        <div class="text-center">
+                            <a href="{% url 'homeevaluation' %}" class="btn btn-dark btn-lg">
+                                Free Home Evaluation
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
