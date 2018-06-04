@@ -38,38 +38,72 @@
     background: #e9ecef url('/static/images/icons/home-green.png') no-repeat;
     cursor: pointer;
 }
-#savings-slider::-ms-track {
-    background: transparent;
-    border-color: transparent;
-    color: transparent;
-    border-color: transparent;
-    border-width: 34px 0;
+
+/* target IE >= 9 */
+@media screen and (min-width:0\0) {
+    #savings-slider {
+        background: transparent !important;
+        border-color: transparent !important;
+        color: transparent !important;
+        height: 120px !important;
+    }
+    #savings-slider::-ms-track {
+        color: transparent !important;
+    }
+    #savings-slider::-ms-fill-lower {
+        background: #737d29;
+        background: -moz-linear-gradient(left, #737d29 0%, #c2cf39 100%);
+        background: -webkit-linear-gradient(left, #737d29 0%,#c2cf39 100%);
+        background: linear-gradient(to right, #737d29 0%,#c2cf39 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#737d29', endColorstr='#c2cf39',GradientType=1 );
+    }
+    #savings-slider::-ms-fill-upper {
+        background: #737d29;
+        background: -moz-linear-gradient(left, #737d29 0%, #c2cf39 100%);
+        background: -webkit-linear-gradient(left, #737d29 0%,#c2cf39 100%);
+        background: linear-gradient(to right, #737d29 0%,#c2cf39 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#737d29', endColorstr='#c2cf39',GradientType=1 );
+    }
+    #savings-slider::-ms-thumb {
+        width: 78px;
+        height: 78px;
+        border: 2px solid #737d29;
+        border-top: 2px solid #c2cf39;
+        background: #e9ecef url('/static/images/icons/home-green.png') no-repeat;
+        cursor: pointer;
+    }
 }
-#savings-slider::-ms-fill-lower {
-    background: #737d29;
-    background: -moz-linear-gradient(left, #737d29 0%, #c2cf39 100%);
-    background: -webkit-linear-gradient(left, #737d29 0%,#c2cf39 100%);
-    background: linear-gradient(to right, #737d29 0%,#c2cf39 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#737d29', endColorstr='#c2cf39',GradientType=1 );
-}
-#savings-slider::-ms-fill-upper {
-    background: #737d29;
-    background: -moz-linear-gradient(left, #737d29 0%, #c2cf39 100%);
-    background: -webkit-linear-gradient(left, #737d29 0%,#c2cf39 100%);
-    background: linear-gradient(to right, #737d29 0%,#c2cf39 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#737d29', endColorstr='#c2cf39',GradientType=1 );
-}
-#savings-slider::-ms-thumb {
-    width: 78px;
-    height: 78px;
-    border: 2px solid #737d29;
-    border-top: 2px solid #c2cf39;
-    background: #e9ecef url('/static/images/icons/home-green.png') no-repeat;
-    cursor: pointer;
-}
-#savings-slider:focus::-ms-fill-lower {
-    background: #737d29;
-}
-#savings-slider:focus::-ms-fill-upper {
-    background: #737d29;
+/* target edge (all) */
+@supports (-ms-ime-align:auto) {
+    #savings-slider {
+        background: transparent !important;
+        border-color: transparent !important;
+        color: transparent !important;
+        height: 120px !important;
+    }
+    #savings-slider::-ms-track {
+        color: transparent !important;
+    }
+    #savings-slider::-ms-fill-lower {
+        background: #737d29;
+        background: -moz-linear-gradient(left, #737d29 0%, #c2cf39 100%);
+        background: -webkit-linear-gradient(left, #737d29 0%,#c2cf39 100%);
+        background: linear-gradient(to right, #737d29 0%,#c2cf39 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#737d29', endColorstr='#c2cf39',GradientType=1 );
+    }
+    #savings-slider::-ms-fill-upper {
+        background: #737d29;
+        background: -moz-linear-gradient(left, #737d29 0%, #c2cf39 100%);
+        background: -webkit-linear-gradient(left, #737d29 0%,#c2cf39 100%);
+        background: linear-gradient(to right, #737d29 0%,#c2cf39 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#737d29', endColorstr='#c2cf39',GradientType=1 );
+    }
+    #savings-slider::-ms-thumb {
+        width: 78px;
+        height: 78px;
+        border: 2px solid #737d29;
+        border-top: 2px solid #c2cf39;
+        background: #e9ecef url('/static/images/icons/home-green.png') no-repeat;
+        cursor: pointer;
+    }
 }
